@@ -1,0 +1,21 @@
+apiVersion: ENC[AES256_GCM,data:gkY=,iv:EP5pLYFhhtVayLXq3QpT1GKklH66gohnDFdneNJsEIU=,tag:AUYCedpIi30fbIwG13t4TA==,type:str]
+kind: ENC[AES256_GCM,data:xdc4Mxjo,iv:1c1ex49GRL5DSV3wWv3GaaiR47epcguy8Z8fv/2g/iY=,tag:4/Vg7XsX5kPQPxb/nAezcA==,type:str]
+metadata:
+    name: ENC[AES256_GCM,data:S+bvg92PV1E=,iv:tHJQ80aroAcBT49GKDWWxFJG1kplMowhItl8c6/4aTs=,tag:mBRtOi2+jd70E9ABzJaUJg==,type:str]
+stringData:
+    password: ENC[AES256_GCM,data:v7JgDXWE8iIIF9z/Bq+Bdena8zD9LMtRykWOeupRWUahPm4MyffE,iv:RH5kAtxVGvYK+UGOixkjeNBFJELY06dFudp637LY0i8=,tag:A9s7VCBLnt0b4Ox8rIwjEQ==,type:str]
+sops:
+    kms:
+        - arn: arn:aws:kms:us-east-1:975050300138:key/c52a70eb-eca3-4fe7-ab8f-8f5f4827baba
+          created_at: "2025-01-02T19:49:23Z"
+          enc: AQICAHj+czTrfX9CNxPt4dWY+52d7W6kGr/3pdigzP9TUB2L2AG0kKqCkzzDCYFu2hGQs7k9AAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQM2Um5Tgn5n/Zwq/X5AgEQgDs4oJo34XAYv/u7ofd+3eE7tgVeRN5h5v1dVW8MaswJRnhtX/r6vrRKDkorvDMNYL6IowGMxHdbhd13Rg==
+          aws_profile: ""
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age: []
+    lastmodified: "2025-01-02T19:49:24Z"
+    mac: ENC[AES256_GCM,data:i7rZocutDkNteYG60+h8WyhBFy3dg8sKWSN5ZJRzZnBGG9YSEUNyW7Ig1Y0/Oe+Qj3rCDniR5pd8y0qVg7ZzVzv+c9Q2iiKmgFDhcz62EGiOxzdfRA6cayWLrnKp/7ImNA5+56I1TlxGlw4YAa/JLl3eTR6rUjjQCJsVGyjyoQw=,iv:Nz2gZGJR+fBg6pVBguz6qiY6alCGVSq+aqBxJUY63Sg=,tag:CW1zqTQDVVQTcep+MycAYw==,type:str]
+    pgp: []
+    unencrypted_suffix: _unencrypted
+    version: 3.9.0
