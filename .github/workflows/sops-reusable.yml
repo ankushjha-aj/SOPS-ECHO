@@ -27,10 +27,12 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_KEY }}
         aws-region: eu-central-1
 
-    - name: Install sops
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y sops
+      # Install Mozilla Sops Binary
+    - name: Sops Binary Installer
+      uses: mdgreenwald/mozilla-sops-action@v1.4.1
+      with:
+        version: 'v3.7.3' # default is latest stable
+        id: install
 
     - name: Decrypt the file
       run: |
