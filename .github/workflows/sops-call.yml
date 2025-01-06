@@ -4,7 +4,7 @@ on:
 
 jobs:
   call-decrypt-workflow:
-    uses: ankushjha-aj/rpfs-hcloud/.github/workflows/sops-reusable.yml@sops
+    uses: ankushjha-aj/SOPS-ECHO/.github/workflows/sops-reusable.yml@main
     with:
       aws-region: "eu-central-1"  
       file-to-decrypt: "ashwini.enc.yml"
