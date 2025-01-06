@@ -6,7 +6,7 @@ jobs:
   call-decrypt-workflow:
     uses: ankushjha-aj/SOPS-ECHO/.github/workflows/sops-reusable.yml@main
     with:
-      file-to-decrypt: "ashwini.enc.yml"
+      file-to-decrypt: "sops-test-enc.yaml"
     secrets: 
       AWS_ACCESS_KEY: ${{ secrets.STOKENET_AWS_ACCESS_KEY }}
       AWS_SECRET_KEY: ${{ secrets.STOKENET_AWS_SECRET_KEY }} 
