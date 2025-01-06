@@ -12,30 +12,34 @@ on:
         required: true
 
 jobs:
-  decrypt-and-echo:
+  decrypt-and-append:
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
 
-      # Configure AWS Credentials
-    - name: configure aws credentials
+    - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v4
       with:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_KEY }}
         aws-region: eu-central-1
 
-      # Install Mozilla Sops Binary
-    - name: Sops Binary Installer
+    - name: Install Mozilla Sops Binary
       uses: mdgreenwald/mozilla-sops-action@v1.4.1
       with:
-        version: 'v3.7.3' # default is latest stable
-        id: install
+        version: 'v3.7.3'
 
     - name: Decrypt the file
       run: |
         sops --decrypt ${{ inputs.file-to-decrypt }} > decrypted-file.yml
         echo "Decrypted file content:"
         cat decrypted-file.yml
+
+    - name: Append to vars.yml
+      run: |
+        touch vars.yml  
+        cat decrypted-file.yml >> vars.yml
+        echo "Updated vars.yml content:"
+        cat vars.yml
