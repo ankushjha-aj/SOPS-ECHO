@@ -40,6 +40,12 @@ jobs:
     - name: Append to vars.yml
       run: |
         touch vars.yml  
-        cat decrypted-file.yml >> vars.yml
+        echo "appended_data: value" >> vars.yml
         echo "Updated vars.yml content:"
         cat vars.yml
+
+    - name: Add appended data back to decrypted file
+      run: |
+        cat vars.yml >> decrypted-file.yml
+        echo "Updated decrypted-file.yml content:"
+        cat decrypted-file.yml
